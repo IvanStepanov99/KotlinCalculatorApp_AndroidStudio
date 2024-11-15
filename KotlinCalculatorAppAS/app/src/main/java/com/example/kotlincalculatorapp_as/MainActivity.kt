@@ -11,16 +11,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModelProvider
 import com.example.kotlincalculatorapp_as.ui.theme.KotlinCalculatorAppASTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val calculatorViewModel = ViewModelProvider(this)[CalculatorViewModel::class.java]
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             KotlinCalculatorAppASTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Calculator(modifier = Modifier.padding(innerPadding))
+                    Calculator(modifier = Modifier.padding(innerPadding), calculatorViewModel)
                 }
             }
         }
