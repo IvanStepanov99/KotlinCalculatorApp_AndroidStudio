@@ -1,0 +1,14 @@
+Kotlin Calculator App (Android Studio)
+A simple  calculator application built using Kotlin and Jetpack Compose. 
+The app supports basic arithmetic operations and provides responsive UI.
+
+Features
+Basic arithmetic operations: 
+Addition, Subtraction, Multiplication, Division.
+Real-time result calculation as you type.
+Buttons with custom colors for improved UX.
+Supports landscape and portrait orientations.
+
+Technologies Used
+Kotlin
+Jetpack Compose for UI.
